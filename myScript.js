@@ -1,4 +1,4 @@
-if (window.screen.width > 800) {
+// if (window.screen.width > 800) () => {
 
 // ___PHOTO/MENU___
 const photo = document.querySelector('#myPhoto');
@@ -37,4 +37,5 @@ socials.addEventListener('mouseleave', () => {
 })
 
 
-}
+// }
+

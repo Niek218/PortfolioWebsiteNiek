@@ -9,18 +9,14 @@
     }
     
       /* DISABLE SCROLLING */
-    .personalPageOverview {
+    .PageOverview {
       overflow-y: none;
       height: 90%;
       overflow-y: hidden;
       margin-top: 10%;
       margin-bottom: 10%;
     }
-    .projectPageOverview {
-      overflow-y: none;
-      height: 100%;
-      overflow-y: hidden;
-    }
+  
     .txtPageProjects {
       display: flex;
       justify-content: flex-end;

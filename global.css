@@ -24,7 +24,7 @@ body {
     scrollbar-width: none; /* hide scrollbar Firefox */
 }
 
-.personalPageOverview::-webkit-scrollbar {
+.PageOverview::-webkit-scrollbar {
     display: none; /* Hide scrollbar voor chrome, safari & opera */
 }
 

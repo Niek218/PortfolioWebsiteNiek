@@ -26,6 +26,7 @@
     user-select: none; 
     /* Niet selecteerbaar */
     display: block;
+    animation: photo 0.5s;
 }
 
 .nav-main {
@@ -63,6 +64,8 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
     width: 80%;
+    position: relative;
+    animation: mymove1 1s;
 }
 
 .linesBottomContainer{
@@ -70,6 +73,8 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
     width: 80%;
+    position: relative;
+    animation: mymove2 1s;
 }
 
 .linesT {
@@ -78,6 +83,7 @@ nav a:hover {
     width: 80%;
     height: 15vh;
 }
+
 .linesB {
     border-width: 2px 0 0 0;
     border-style: solid;
@@ -89,6 +95,9 @@ nav a:hover {
     width: 50%;
 }
 
+.linesT .halfW {
+    top: 200px;
+}
 
 /* RIGHT SIDE */
     /* HOME-/ MAINPAGE */
@@ -108,6 +117,14 @@ nav a:hover {
     flex-direction: column;
     margin-inline: 10%;
   }
+
+.mainTxt > p {
+    animation: slideright 1s;
+}
+
+.mainTxt > h1 {
+    animation: slideleft 1s;
+}
 
 .mainTxt:hover {
     font-size: 110%;
@@ -168,17 +185,18 @@ nav a:hover {
 
 
     /* PERSONAL PAGE */
-.personalPageOverview {
+.PageOverview {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin-inline: 10%;
-    height: 60%;
+    height: 100%;
     overflow-y: scroll;
     -ms-overflow-style: none; /* hide scrollbar IE en edge */
     scrollbar-width: none; /* hide scrollbar Firefox */
 }
 
-.personalPageOverview::-webkit-scrollbar {
+.PageOverview::-webkit-scrollbar {
     display: none; /* Hide scrollbar voor chrome, safari & opera */
 }
 
@@ -187,9 +205,6 @@ nav a:hover {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
-}
-
-.txtPagePersonal > h1 {
     margin: 4%;
 }
 
@@ -200,26 +215,8 @@ nav a:hover {
     width: 30%;
 }
 
-
-/* PROJECT PAGE */
-.projectPageOverview {
-    display: flex;
-    flex-direction: column;
-    /* margin-inline: 10%; */
-    padding-top: 18vh;
-    height: 60%;
-    overflow-y: scroll;
-    -ms-overflow-style: none; /* hide scrollbar IE en edge */
-    scrollbar-width: none; /* hide scrollbar Firefox */
-}
-
-.projectPageOverview::-webkit-scrollbar {
-    display: none; /* Hide scrollbar voor chrome, safari & opera */
-}
-
-.txtPageProjects {
-    display: flex;
-    justify-content: center;
+.txtPageTitle {
+    margin: 2%;
     margin-inline: 5%;
     max-width: calc(100% - 20px);
 }
@@ -239,7 +236,27 @@ nav a:hover {
     background-color: rgba(0,0,0,0.5);
 }
 
-/* CONTACT PAGE */
-.contactTxt > form {
-    margin: 10%;
+@keyframes photo {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+}
+
+@keyframes mymove1 {
+    from {top: -50px; opacity: 0%;}
+    to {top: 0px; opacity: 100%;}
+  }
+  
+@keyframes mymove2 {
+    from {top: 50px; opacity: 0%;}
+    to {top: 0px; opacity: 100%;}
+}
+
+@keyframes slideright {
+    from {scale: 70%; opacity: 0%;}
+    to {scale: 100%; opacity: 100%;}
+}
+
+@keyframes slideleft {
+    from {scale: 90%; opacity: 0%; top: 500px;}
+    to {scale: 100%; opacity: 100%; top: 0px;}
 }
