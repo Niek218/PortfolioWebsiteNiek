@@ -12,7 +12,7 @@
 
 <body>
 
-    <div class="flex-container">
+    <div  class="flex-container">
         
         <div class="menuPictureBox">
             <div class="linesTopContainer">
@@ -24,10 +24,10 @@
 
             <nav class="nav-main" id="myNav">
                 <ul>
-                    <!-- <li><a href="main.html">Home</a></li>
-                    <li><a href="personal.html">Personal</a></li> -->
-                    <li><a href="projects.html">Return to Projects</a></li>
-                    <!-- <li><a href="cv.html">CV</a></li> -->
+                    <li><a style="text-decoration: underline;" href="index.html">Home</a></li>
+                    <li><a href="personal.html">Personal</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contactform.html">Contact</a></li>
                 </ul>
             </nav>
 
@@ -43,28 +43,32 @@
             </div>
             <ul class="socials" id="mySocials">
                         <li><a href="https://github.com/Niek218" target="_blank"> <img class="socialsicon" src="image/icons8-github-100.png" alt="github"></a></li>
-                        <!-- <li><a href="contactform.html" target="_blank"> <img class="socialsicon" src="image/Mail-icon.png " alt="e-mail"></a></li> -->
                         <li><a href="https://www.linkedin.com/in/niek-wolbrink-026101113/" target="_blank"> <img class="socialsicon" src="image/Linkedin-icon2.png" alt="linkedin"></a></li>
             </ul>
 
-            <div class="PageOverview">
-
-                <div class="pageTitle">
-                    <h1>Portfolio website</h1>
+                <div class="mainTxt">
+                    <p>Hi I'm Niek, <br> Thanks for visiting my website!</p>
+                    <h1>Feel free to take a look around if you like.</h1>
                 </div>
-                <div class="pageTxt">
-                    <ul>
-                        <h2>Hey, you're looking at it right now 😵
-                            <br><br>
-                            Smile
-                        </h2>
+                <div class="musicDiv">
+                    <p class="musicText" onclick="showMusicSongs()"> Click here to listen to some of my songs </p>
+                    <ul id="musicSongs">
+                        <audio controls id="audioControls">
+                            <source src="image/Guitar-v2.mp3" type="audio/mpeg">
+                        </audio>
+                        <br>
+                        <audio controls id="audioControls">
+                            <source src="image/Birthday.mp3" type="audio/mpeg">
+                        </audio>
+                        <br>
+                        <audio controls id="audioControls">
+                            <source src="image/Now.wav" type="audio/mpeg">
+                        </audio>
                     </ul>
                 </div>
-            </div>
         </div>
-
     </div>
 
-    <script src="myScript.js"></script>
+    <script type="text/javascript" src="myScript.js"></script>
 </body>
 </html>

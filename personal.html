@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="responsive.css">
 </head>
 
-<body>
+<body onload = "AgeCalculator()">
 
     <div class="flex-container">
         
@@ -20,11 +20,11 @@
                 <div class="linesT"></div>
             </div>
 
-            <img class="photo" id="myPhoto" src="image/profilepic.png" alt="photo">
+            <img class="photo" id="myPhoto" src="image/image-niek.png" alt="photo">
 
             <nav class="nav-main" id="myNav">
                 <ul>
-                    <li><a href="main.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a style="text-decoration: underline;" href="personal.html">Personal</a></li>
                     <li><a href="projects.html">Projects</a></li>
                     <li><a href="contactform.html">Contact</a></li>
@@ -48,22 +48,19 @@
             </ul>
 
             <div class="PageOverview">
-                <div class="txtPageTitle"><h1>Personal</h1></div>
+                <div class="pageTitle"><h1>Personal</h1></div>
+                    <div class="pageTxt">
 
-                <div class="title txtPagePersonal">
-                    <p>
-                        Hi, I'm Niek. I'm 28 years and ... days old. I was born in Leiderdorp and since I was four years old, my parents and I moved to Apeldoorn. Right now I still live in Apeldoorn. <br><br><br> Before I started my study Open-ICT in Utrecht I was working as a pharmacy assistant in the hospital. That's also where I met my girlfriend and right now we live together with our two cats. <br><br><br>   I like to make music. I mainly make electronic music. I also use my guitar or other sounds that are useful for making music.
-                    </p> <br><br>
-                <div class="bulletpointwindow">
-                    <ul><h3>What I like to do:</h3>
-                        <li>Music Production</li>
-                        <li>Fitness</li>
-                        <li>Guitar</li>
-                        <li>Learning new things</li>
-                    </ul>
-                </div>
-                    <!-- HIERZO 'READ ON' STUKJE -->
-                </div>
+                        <p id="ageNumbers"></p> 
+                            
+                        <br><br>
+                        <div class="bulletpointwindow">
+                            <p id="hobbies">
+
+                            </p>
+                        </div>
+                    </div>
+                        <!-- HIERZO 'READ ON' STUKJE -->
             </div>
         </div>
 

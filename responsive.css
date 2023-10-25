@@ -37,12 +37,25 @@
     }
     /* Deze items uitegeschakeld wanneer je op je mobiel de website bekijkt ( < 800px) */
 
+    .menuPictureBox {
+      align-items: flex-start;
+    }
+
     .nav-main {
       display: block;
     }
 
     .socials {
+      position: fixed;
       top: 4%;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      justify-items: center;
+    }
+
+    .project-window {
+      flex-direction: column;
     }
     
   }
