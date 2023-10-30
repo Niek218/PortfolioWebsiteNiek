@@ -1,4 +1,8 @@
 /* ALL */
+
+
+    /* FLEX-CONTAINER ALL PAGES */
+
 .flex-container {
     display: flex;
     flex-direction: row;
@@ -6,9 +10,8 @@
 }
 
 
-/* LEFT SIDE */
-
     /* MENU & PHOTO */
+
 .menuPictureBox{
     display: flex;
     flex: 33%;
@@ -21,44 +24,42 @@
     user-select: none;
     /* nav front size */
 }
-
 .photo {
     border: solid white 3px;
     width: fit-content;
     height: fit-content;
-    padding-block: 5vh;
-    padding-inline: 10vh;
-    user-select: none; 
-    /* Niet selecteerbaar */
+    padding-block: 2vh;
+    padding-inline: 4vh;
+    user-select: none; /* Niet selecteerbaar */
     display: block;
-    animation: photo 0.5s;
     width: 180px;
-    /* height: 150px; */
+    animation: photo 0.5s;
 }
-
 .nav-main {
     border: solid white 3px;
     padding: 20px;
     padding-inline: 10vh;
     display: none;
+    animation: navPeek 0.2s;
 }
 .nav-main > h1 :hover {
     font-size: 105%;
     transition-timing-function: ease-in;
-    transition: 0.1s;
-
+    transition: 0.5s;
 }
-
 nav a {
     color: white;
     text-decoration: none;
 }
 nav a:hover {
     text-decoration: underline;
+
 }
 
 
-    /* LIJNEN IN CSS */
+    /* LINES IN CSS */
+
+
 .linesTopContainer{
     display: flex;
     flex-direction: column;
@@ -80,12 +81,14 @@ nav a:hover {
     border-style: solid;
     width: 80%;
     height: 15vh;
+    transition: width .2s; /* lines width animation time */
 }
 .linesB {
     border-width: 2px 0 0 0;
     border-style: solid;
     width: 80%;
     height: 15vh;
+    transition: width .2s; /* lines width animation time */
 }
 .halfW{
     width: 50%;
@@ -93,27 +96,43 @@ nav a:hover {
 .linesT .halfW {
     top: 200px;
 }
+.linesT:hover {
+    width: 105%; /* lines width size animation */
+}
+.linesB:hover {
+    width: 105%; /* lines width size animation */
+}
 
 
-/* RIGHT SIDE */
+/* FOOTER */
+/* .footer {
+    bottom: 5px;
+    left: 5px;
+    font: rgb(194, 192, 192);
+} */
 
-    /* HOME- & MAINPAGE */
-.mainPage {
+
+
+/* PAGES */
+
+
+    /* MAINPAGE */
+
+.mainPageIndex {
     display: flex;
     flex-direction: column;
     flex: 66%;
     width: 100%;
     align-content: center;
-    align-items: center;
     justify-content: center;
     user-select: none; 
+    align-items: center;
     /* kan niet worden geselecteerd */
 }
-
 .mainTxt {
     margin-inline: 10%;
     padding-bottom: 5%;
-  }
+    }
 .mainTxt > p {
     animation: slideright 1.2s;
 }
@@ -140,46 +159,44 @@ nav a:hover {
 .musicText {
     position: fixed;
     bottom: 3%;
+    transition: scale 0.2s, opacity 0.5s;
+    animation-name: musicText;
+    animation-duration: 2s;
+    opacity: .6;
+}
+.musicText:hover {
+    scale: 110%;
+    opacity: 1;
 }
 #musicSongs {
-    display: flex;
+    display: none;
     justify-content: center;
     flex-wrap: wrap;
     position: fixed;
     padding: 3%;
     bottom: 6%;
-    opacity: 0;
+    transition: all 3s;
 }
+
 /* #musicText:active {
     font-size: 99%;
     transition-timing-function: ease-in;
     transition: 0.1s;
 } */
-
 #audioControls {
-    width: 100%;
-    background-color: #333;
+    /* width: 100%; */
+    background-color: rgba(0,0,0, .5);
     border: 1px solid #666;
     border-radius: 5px;
+    margin: 10px;
     padding: 10px;
 }
-#audioControls::-webkit-media-controls {
+/* #audioControls::-webkit-media-controls {
     display: none;
 }
 #audioControls::media-controls {
     display: none;
-}
-#audioControls::media-controls-play-button {
-    width: 40px;
-    height: 40px;
-    background-color: #f00;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    color: #fff;
-}
+} */
 #audioControls::media-controls-volume-slider {
     width: 80px;
     background-color: #333;
@@ -189,23 +206,38 @@ nav a:hover {
 }
 
 
+    /* FLEX-CONTAINER ALL PAGES (EXCLUDING MAIN PAGE) */
+    
+.mainPage {
+    display: flex;
+    flex-direction: column;
+    flex: 66%;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    user-select: none; 
+    align-content: center;
+    /* kan niet worden geselecteerd */
+}
+
+/* SPECIFICS */
+
+
     /* PERSONAL PAGE */
+
 .PageOverview {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-inline: 10%;
     height: 100%;
     overflow-y: scroll;
     -ms-overflow-style: none; /* hide scrollbar IE en edge */
     scrollbar-width: none; /* hide scrollbar Firefox */
     /* above is positioning*/
 }
-
 .PageOverview::-webkit-scrollbar {
     display: none; /* Hide scrollbar voor chrome, safari & opera */
 }
-
 .pageTitle {
     margin: 3%;
     margin-inline: 7%;
@@ -216,15 +248,59 @@ nav a:hover {
     border-radius: 20px;
     width: fit-content;
 }
-
 .pageTxt {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
     background-color: rgba(0,0,0, .5);
-    padding: 20px 80px 20px 15px;
+    padding: 20px 15px 20px 15px;
     border-radius: 20px;
+    margin: 0% 10% 0% 0% ;
+}
+.pageTxt > form > input {
+    display: flex;
+    justify-content: flex-end;
+}
+
+    /* PROJECT PAGE */
+
+.bulletpointwindow {
+    background-color: rgba(0,0,0,0.25);
+    padding: 30px 40px 30px;
+    border-radius: 50px;
+    width: 40%;;
+    border-style: inset;
+}
+.projectTxt {
+    background-color: rgba(0,0,0, .5);
+    padding: 20px 15px 20px 15px;
+    border-radius: 20px;
+    align-items: center;
+    margin-inline: auto;
+}
+.project-window {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: fit-content;
+    color: white;
+    /* Was paars, omdat het een link was */
+}
+.project-window > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 20% 20px;
+    margin: 2.5% 2.5% 2.5%;
+    width: 100%;
+    /* background-color: rgba(0,0,0,0.25); */
+    border-radius: 20px;
+    border-style: inset;
 }
 
 
-/* SOCIALS */
+    /* SOCIALS */
+
 .socials {
     display: flex;
     /* flex-wrap: nowrap; */
@@ -240,7 +316,6 @@ nav a:hover {
     padding-top: 0.3%;
     border-radius: 10px;
 }
-
 .dots {
     display: flex;
     flex-direction: row;
@@ -250,7 +325,6 @@ nav a:hover {
     transition-delay: 1s;
     right: 10.6%;
 }
-
 .socialsicon {
     flex-wrap: nowrap;
     position: relative;
@@ -258,64 +332,33 @@ nav a:hover {
     height: 40px;
     margin: 0px 15px 0px;
 }
-
 .socialsicon:hover {
     scale: 115%;
 }
 
 
-    /* EXTRAS */
-.bulletpointwindow {
-    background-color: rgba(0,0,0,0.25);
-    padding: 30px 40px 30px;
-    border-radius: 50px;
-    width: 40%;;
-    border-style: inset;
-}
-
-
-
-.project-window {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100vh;
-    max-width: calc(100% - 20px);
-    color: white;
-    /* Was paars, omdat het een link was */
-}
-
-.project-window > div {
-    display: flex;
-    justify-content: center;
-    padding: 20px 0px 20px;
-    margin: 2.5% 2.5% 2.5%;
-    width: 44%;
-    background-color: rgba(0,0,0,0.25);
-    border-radius: 20px;
-    border-style: inset;
-}
-
-
+    /* KEYFRAMES */
+    
 @keyframes photo {
     from {opacity: 0%;}
     to {opacity: 100%;}
 }
-
+@keyframes navPeek {
+    0% {opacity: 0; scale: 80%;}
+    100% {opacity: 1; scale: 100%;}
+}
 @keyframes mymove1 {
     from {top: -50px; opacity: 0%;}
     to {top: 0px; opacity: 100%;}
-  }
-  
+}
 @keyframes mymove2 {
     from {top: 50px; opacity: 0%;}
     to {top: 0px; opacity: 100%;}
 }
-
 @keyframes slideright {
     from {scale: 70%; opacity: 0%;}
     to {scale: 100%; opacity: 100%;}
 }
-
 @keyframes slideleft {
     from {scale: 90%; opacity: 0%; top: 500px;}
     to {scale: 100%; opacity: 100%; top: 0px;}

@@ -23,9 +23,13 @@ nav.addEventListener('mouseleave', () => {
 // ___MUSIC BUTTONS___
 function showMusicSongs() {
     const mySongList = document.querySelector("#musicSongs")
-    if(mySongList.style.opacity == '0') {
+    if(mySongList.style.display == 'none') {
+        mySongList.style.display = 'flex';
+        mySongList.style.scale = '100%';
         mySongList.style.opacity = '1';
     } else {
+        mySongList.style.display = 'none';
+        mySongList.style.scale = '50%';
         mySongList.style.opacity = '0';
     }
 }
@@ -121,7 +125,7 @@ function AgeCalculator() {
     const dayNumber = ageCalculator(newDateMs, myBirthday);
 
     // Code wordt ingeladen in de 'p' #ageNumbers
-    document.querySelector("#ageNumbers").innerHTML = `Hi, I'm Niek. I'm ${yearNumber} years and ${dayNumber} days old. I was born in Leiderdorp and since I was four years old, my parents and I moved to Apeldoorn. Right now I still live in Apeldoorn. <br><br><br> Before I started my study Open-ICT in Utrecht I was working as a pharmacy assistant in the hospital. That's also where I met my girlfriend and right now we live together with our two cats. <br><br><br>   I like to make music. I mainly make electronic music. I also use my guitar or other sounds that are useful for making music.`;
+    document.querySelector("#ageNumbers").innerHTML = `Hi, I'm Niek. I'm ${yearNumber} years and ${dayNumber} days old. I was born in Leiderdorp and since I was four years old, my parents and I moved to Apeldoorn. Right now I still live in Apeldoorn. <br><br><br> Before I started my study Open-ICT in Utrecht I was working as a pharmacy assistant in the hospital. That's also where I met my girlfriend and right now we live together with our two cats. <br><br><br>   I like to make music. I mainly make electronic music. I also use my guitar or other sounds that are useful for making music. <br><br><br>`;
 
     // Calculating days without the full years: My age in milliseconds will be subtracted from current date in milliseconds. If my birthday (with current year) is bigger than current date, add 365 days.   
     function ageCalculator(currentDate, myBirthday) {
@@ -132,7 +136,7 @@ function AgeCalculator() {
         return calculation;
     }
 
-    // Calculating years by subtracting my birth year from the current year. If the date the current date (in ms) is smaller than my birthday, it will add a year.
+    // Calculating years by subtracting my birth year from the current year. If the date of the current date (in ms) is smaller than my birthday (here we don't use my birth year), it will subtract a year.
     function yearCalculator() {
         let total = year - 1995;
         if(newDateMs < myBirthdayMs) {
@@ -142,3 +146,8 @@ function AgeCalculator() {
     }
 };
 
+
+
+
+// CONTACT FORM
+//

@@ -1,61 +1,62 @@
   /* Responsive layout - makes a one column layout instead of a two-column layout */
 @media (max-width: 800px) {
-    .flex-container {
-      flex-direction: column;
-    }
-
-    .mainTxt:hover {
-      font-size: 100%;
-    }
-    
-      /* DISABLE SCROLLING */
-    .PageOverview {
-      overflow-y: none;
-      height: 90%;
-      overflow-y: hidden;
-      margin-top: 10%;
-      margin-bottom: 10%;
-    }
-  
-    .txtPageProjects {
-      display: flex;
-      justify-content: flex-end;
-      margin-inline: auto;
-    }
-
-    /* BLOCK MENU EXTRAS ON PHONE */
-    .dots,
-    .nav-main:hover,
-    .nav a:hover,
-    .linesTopContainer,
-    .linesBottomContainer,
-    .linesT,
-    .linesB,
-    .halfW,
-    .photo {
-      display: none;
-    }
-    /* Deze items uitegeschakeld wanneer je op je mobiel de website bekijkt ( < 800px) */
-
-    .menuPictureBox {
-      align-items: flex-start;
-    }
-
-    .nav-main {
-      display: block;
-    }
-
-    .socials {
-      position: fixed;
-      top: 4%;
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      justify-items: center;
-    }
-
-    .project-window {
-      flex-direction: column;
-    }
-    
+  .flex-container {
+    flex-direction: column;
   }
+
+  .mainTxt:hover {
+    font-size: 100%;
+  }
+  
+    /* DISABLE SCROLLING */
+  .PageOverview {
+    overflow-y: none;
+    height: 90%;
+    overflow-y: hidden;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+  
+  .pageTxt {
+    margin: 0% 10% 0% 10%;
+    font-size: large;
+  }
+
+  .txtPageProjects {
+    display: flex;
+    justify-content: flex-end;
+    margin-inline: auto;
+  }
+
+  /* BLOCK MENU EXTRAS ON PHONE */
+  .dots,
+  .nav-main:hover,
+  .nav a:hover,
+  .linesTopContainer,
+  .linesBottomContainer,
+  .linesT,
+  .linesB,
+  .halfW,
+  .photo {
+    display: none;
+  }
+  /* Deze items uitegeschakeld wanneer je op je mobiel de website bekijkt ( < 800px) */
+
+  .menuPictureBox {
+    align-items: flex-start;
+  }
+
+  .nav-main {
+    display: block;
+  }
+
+  .socials {
+    position: fixed;
+    top: 4%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-items: center;
+  }
+
+}
