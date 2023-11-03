@@ -45,15 +45,15 @@
     user-select: none; /* Niet selecteerbaar */
     display: block;
     width: 180px;
-    animation: photo 0.5s;
+    animation: opacity100 0.5s;
     background-color: rgba(250, 250, 250, 0.06);
 }
 .nav-main {
     border: solid white 3px;
     padding: 20px;
-    padding-inline: 10vh;
+    padding: 3vh 9vh 3vh 9vh;
     display: none;
-    animation: navPeek 0.2s;
+    animation: opacity100 0.2s;
 }
 .nav-main > h1 :hover {
     transition-timing-function: ease-in;
@@ -161,7 +161,7 @@ nav a:hover {
 .musicText {
     position: fixed;
     margin-top: 1%;
-    transition: scale 0.2s, opacity 0.5s;
+    transition: scale 0.2s, opacity60 0.5s;
     opacity: .6;
     animation: opacity 1.2s;
 }
@@ -367,13 +367,13 @@ nav a:hover {
 
     /* KEYFRAMES */
     
-@keyframes photo {
-    from {opacity: 0%;}
-    to {opacity: 100%;}
-}
-@keyframes navPeek {
+@keyframes opacity100 {
     0% {opacity: 0}
     100% {opacity: 1}
+}
+@keyframes opacity60 {
+    from {opacity: 0%;}
+    to {opacity: 60%;}
 }
 @keyframes mymove1 {
     from {top: -50px; opacity: 0%;}
@@ -399,8 +399,4 @@ nav a:hover {
     30% {opacity: 100%; top: 10%}
     45% {opacity: 0%; top: 13%;}
     100% {opacity: 0%; top: 13%}
-}
-@keyframes opacity {
-    from {opacity: 0%;}
-    to {opacity: 60%;}
 }
