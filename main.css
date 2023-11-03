@@ -1,12 +1,24 @@
-/* ALL */
-
-
     /* FLEX-CONTAINER ALL PAGES */
 
 .flex-container {
     display: flex;
     flex-direction: row;
     height: 100vh;
+}
+
+
+    /* FLEX-CONTAINER ALL PAGES (EXCLUDING MAIN PAGE) */
+    
+.mainPage {
+    display: flex;
+    flex-direction: column;
+    flex: 66%;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    user-select: none; 
+    align-content: center;
+    /* kan niet worden geselecteerd */
 }
 
 
@@ -20,7 +32,7 @@
     align-items: center;
 }
 .menuPictureBox > nav > ul > li {
-    font-size: 200%;
+    font-size: 220%;
     user-select: none;
     /* nav front size */
 }
@@ -29,11 +41,12 @@
     width: fit-content;
     height: fit-content;
     padding-block: 2vh;
-    padding-inline: 4vh;
+    padding-inline: 8vh;
     user-select: none; /* Niet selecteerbaar */
     display: block;
     width: 180px;
     animation: photo 0.5s;
+    background-color: rgba(250, 250, 250, 0.06);
 }
 .nav-main {
     border: solid white 3px;
@@ -43,17 +56,16 @@
     animation: navPeek 0.2s;
 }
 .nav-main > h1 :hover {
-    font-size: 105%;
     transition-timing-function: ease-in;
     transition: 0.5s;
 }
 nav a {
     color: white;
     text-decoration: none;
+    font-size: 105%;
 }
 nav a:hover {
     text-decoration: underline;
-
 }
 
 
@@ -104,13 +116,6 @@ nav a:hover {
 }
 
 
-/* FOOTER */
-/* .footer {
-    bottom: 5px;
-    left: 5px;
-    font: rgb(194, 192, 192);
-} */
-
 
 
 /* PAGES */
@@ -133,51 +138,48 @@ nav a:hover {
     margin-inline: 10%;
     padding-bottom: 5%;
     }
-.mainTxt > p {
+.intro {
     animation: slideright 1.2s;
 }
 .mainTxt > h1 {
     animation: slideleft 1.2s;
 }
 .mainTxt:hover {
-    font-size: 110%;
     transition-timing-function: ease-in;
-    transition: 0.1s;
+    transition: 1s;
 }
-.mainTxt:active {
-    font-size: 99%;
-    transition-timing-function: ease-in;
-    transition: 0.1s;
-}
+
+
 
 .musicDiv {
     position: fixed;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-content: center;
 }
 .musicText {
     position: fixed;
-    bottom: 3%;
+    margin-top: 1%;
     transition: scale 0.2s, opacity 0.5s;
-    animation-name: musicText;
-    animation-duration: 2s;
     opacity: .6;
+    animation: opacity 1.2s;
 }
 .musicText:hover {
-    scale: 110%;
-    opacity: 1;
+    scale: 110% !important;
+    opacity: 1 !important;
 }
 #musicSongs {
-    display: none;
+    display: flex;
     justify-content: center;
     flex-wrap: wrap;
     position: fixed;
     padding: 3%;
     bottom: 6%;
-    transition: all 3s;
+    /* Button click animation */
+    scale: 0%;
+    transition: scale 0.5s ease;
 }
-
 /* #musicText:active {
     font-size: 99%;
     transition-timing-function: ease-in;
@@ -205,21 +207,6 @@ nav a:hover {
     background-color: #666;
 }
 
-
-    /* FLEX-CONTAINER ALL PAGES (EXCLUDING MAIN PAGE) */
-    
-.mainPage {
-    display: flex;
-    flex-direction: column;
-    flex: 66%;
-    width: 100%;
-    align-content: center;
-    justify-content: center;
-    user-select: none; 
-    align-content: center;
-    /* kan niet worden geselecteerd */
-}
-
 /* SPECIFICS */
 
 
@@ -239,13 +226,17 @@ nav a:hover {
     display: none; /* Hide scrollbar voor chrome, safari & opera */
 }
 .pageTitle {
+    display: flex;
+    justify-content:flex-start;
     margin: 3%;
     margin-inline: 7%;
 }
 .pageTitle > h1 {
-    background-color: rgba(0,0,0, .5);
+    background-color: rgba(0,0,0, .75);
     padding: 8px 20px 8px;
     border-radius: 20px;
+    /* border-style: solid;
+    border-color: rgb(255, 255, 255); */
     width: fit-content;
 }
 .pageTxt {
@@ -254,51 +245,79 @@ nav a:hover {
     /* justify-content: center; */
     background-color: rgba(0,0,0, .5);
     padding: 20px 15px 20px 15px;
+    margin: 0% 15% 0% 0%;
     border-radius: 20px;
-    margin: 0% 10% 0% 0% ;
+    /* border-style: solid;
+    border-color: rgb(255, 255, 255); */
 }
-.pageTxt > form > input {
-    display: flex;
-    justify-content: flex-end;
+.personalPush2Div {
+    display: flex; 
+    flex-direction: row;
 }
 
     /* PROJECT PAGE */
 
 .bulletpointwindow {
-    background-color: rgba(0,0,0,0.25);
+    background-color: rgba(250, 250, 250, 0.06);
     padding: 30px 40px 30px;
     border-radius: 50px;
     width: 40%;;
     border-style: inset;
 }
 .projectTxt {
-    background-color: rgba(0,0,0, .5);
-    padding: 20px 15px 20px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    /* background-color: rgba(0,0,0, .5); */
+    /* padding: 20px 15px 20px 15px; */
     border-radius: 20px;
-    align-items: center;
-    margin-inline: auto;
+    margin: 0% 15% 0% 0%;
+}
+.projectTxt > div > div > a {
+    color: white; 
 }
 .project-window {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    width: fit-content;
-    color: white;
-    /* Was paars, omdat het een link was */
+    width: 100%;
 }
 .project-window > div {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: rgba(0,0,0, .5);
     padding: 20px 20% 20px;
     margin: 2.5% 2.5% 2.5%;
-    width: 100%;
+    width: 100vh;
     /* background-color: rgba(0,0,0,0.25); */
     border-radius: 20px;
-    border-style: inset;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(0, 0, 0);
 }
 
 
+    /* CONTACT PAGE */
+
+.pageTxtForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0,0,0, .5);
+    padding: 20px 15px 20px 15px;
+    margin: 0% 15% 0% 0%;
+    border-radius: 20px;
+    border-style: solid;
+}
+
+.pageTxt > form > input {
+    display: flex;
+    justify-content: flex-end;
+    size: 110%;
+}
+
+    
     /* SOCIALS */
 
 .socials {
@@ -335,7 +354,16 @@ nav a:hover {
 .socialsicon:hover {
     scale: 115%;
 }
-
+.socialsArrow {
+    /* Same position als dots */
+    position: fixed;
+    right: 12%;
+    color: white;
+    padding: 0px 2px 5px 2px;
+    scale: 200%;
+    opacity: 0%;
+    animation: arrow 20s 2;
+}
 
     /* KEYFRAMES */
     
@@ -344,8 +372,8 @@ nav a:hover {
     to {opacity: 100%;}
 }
 @keyframes navPeek {
-    0% {opacity: 0; scale: 80%;}
-    100% {opacity: 1; scale: 100%;}
+    0% {opacity: 0}
+    100% {opacity: 1}
 }
 @keyframes mymove1 {
     from {top: -50px; opacity: 0%;}
@@ -362,4 +390,17 @@ nav a:hover {
 @keyframes slideleft {
     from {scale: 90%; opacity: 0%; top: 500px;}
     to {scale: 100%; opacity: 100%; top: 0px;}
+}
+@keyframes arrow {
+    0% {opacity: 0%; top: 13%;}
+    5% {opacity: 0%; top: 13%;}
+    10% {opacity: 100%; top: 10%}
+    25% {opacity: 0%; top: 13%;}
+    30% {opacity: 100%; top: 10%}
+    45% {opacity: 0%; top: 13%;}
+    100% {opacity: 0%; top: 13%}
+}
+@keyframes opacity {
+    from {opacity: 0%;}
+    to {opacity: 60%;}
 }

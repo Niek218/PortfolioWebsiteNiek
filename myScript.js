@@ -22,19 +22,17 @@ nav.addEventListener('mouseleave', () => {
 
 // ___MUSIC BUTTONS___
 function showMusicSongs() {
-    const mySongList = document.querySelector("#musicSongs")
-    if(mySongList.style.display == 'none') {
-        mySongList.style.display = 'flex';
+    const mySongList = document.querySelector("#musicSongs");
+    if(mySongList.style.opacity == 0 ) {
+        mySongList.style.opacity = 1;
         mySongList.style.scale = '100%';
-        mySongList.style.opacity = '1';
     } else {
-        mySongList.style.display = 'none';
-        mySongList.style.scale = '50%';
-        mySongList.style.opacity = '0';
+        setTimeout(() => {
+            mySongList.style.opacity = 0;
+        }, 500);
+        mySongList.style.scale = '0%';
     }
 }
-
-
 
 
 // ___PERSONAL PAGE HOBBY LIST___
@@ -58,28 +56,30 @@ if(document.URL.includes("personal.html")) {
 }
 
 
-
-
-// ___PROJECT PAGE PROJECTS___
-
-
-
-
 // ___SOCIALBUTTONS___
 // Wanneer de muis in het gebied van de 3 puntjes komt zal de positie (in css heb ik dit aangegeven met 'top') van '-8' (de standaard) naar '4' schuiven.
 const dots = document.getElementById("myDots");
 const socials = document.getElementById("mySocials");
+const arrow = document.getElementById('socialsArrow');
 
 // Hide dots and adjust socials position
 dots.addEventListener('mouseenter', () => {
     dots.style.display = 'none';
     socials.style.top = '4%';
+    arrow.style.animation = 'NaN';
+    arrow.style.top = 'none';
 })
 
 // Show dots on-screen and move socials off-screen
 socials.addEventListener('mouseleave', () => {
     dots.style.display = 'block';
     socials.style.top = '-8%';
+    arrow.style.animation = 'arrow 3s 0';
+    arrow.style.display = 'block';
+})
+
+dots.addEventListener('mouseenter', () => {   
+    arrow.style.display = 'none';
 })
 
 
